@@ -9,10 +9,12 @@
   "private": false,
   "scripts": {
     "lint": "eslint --ext .js,.vue src",
-    "test": "echo \"No test specified\" && exit 0",
+    "test": "jest",
     "publish": "node_modules/.bin/build --win -p always"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@babel/runtime": "^7.1.2",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
@@ -29,9 +31,13 @@
     "ytdl-core": "^0.20.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-stage-2": "^7.0.0",
     "babel-eslint": "^8.2.1",
     "devtron": "1.4.0",
-    "electron": "2.0.8",
+    "electron": "^2.0.8",
     "electron-builder": "^20.22.0",
     "electron-debug": "1.5.0",
     "electron-devtools-installer": "2.2.4",
@@ -45,6 +51,7 @@
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.3.0",
+    "jest": "^23.6.0",
     "quasar-cli": "^0.16.0"
   },
   "engines": {
